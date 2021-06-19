@@ -1,3 +1,4 @@
+![Header](img/header.png)
 # Rg.DiffUtils
 
 Rg.DiffUtils is a powerful tool that allows to merge collections and find differences.
