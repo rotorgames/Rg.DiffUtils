@@ -134,6 +134,7 @@ You can use the `ToDiffHandler` extension method to convert `IEqualityComparer` 
 - `IReadOnlyList<DiffItem<T>> NotMovedItems` All not moved same items
 - `IReadOnlyList<DiffItem<T>> RemovedItems` All items which were removed
 - `IReadOnlyList<DiffItem<T>> AddedItems` All items which were added
+- `IReadOnlyList<DiffStep<T>> Steps` All the necessary steps to merge the new collection to the old
 
 ## Thanks
 https://github.com/androidx/androidx
