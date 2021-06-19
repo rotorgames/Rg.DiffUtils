@@ -7,6 +7,9 @@ The library uses Eugene W. Myers's algorithm to find differences and runs the se
 
 The difference between this library and the rest that this library expands the `ObservableCollection` and allows to notify UI or other elements about all changes in collections. 
 
+## Support platforms
+.NET Standard 1.0 or newer
+
 ## How To Use
 
 ### DiffObservableCollection
