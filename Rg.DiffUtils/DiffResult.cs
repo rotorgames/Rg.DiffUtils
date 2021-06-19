@@ -221,7 +221,7 @@ namespace Rg.DiffUtils
                         var diffItem = GetDiffItem(-1, posY);
 
                         _addedItems.Add(diffItem);
-                        wrapper.Insert(posX, GetDiffItem(-1, posY));
+                        wrapper.Insert(posX, diffItem);
 
                         currentListSize++;
                     }
