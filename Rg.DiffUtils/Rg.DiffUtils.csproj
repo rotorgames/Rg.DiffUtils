@@ -16,6 +16,7 @@
 The library uses Eugene W. Myers's algorithm to find differences and runs the second pass to find movements.
 
 The difference between this library and the rest that this library expands the ObservableCollection and allows to notify UI or other elements about all changes in collections.</Description>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/rotorgames/Rg.DiffUtils/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
