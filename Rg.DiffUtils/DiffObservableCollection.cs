@@ -153,7 +153,7 @@ namespace Rg.DiffUtils
             CheckReentrancy();
 
             var changedItems = Items
-                .Skip(startIndex + 1)
+                .Skip(startIndex)
                 .Take(count)
                 .ToList();
 
@@ -188,6 +188,8 @@ namespace Rg.DiffUtils
 
             CheckReentrancy();
 
+            var eventStartIndex = startIndex < 0 ? Items.Count : startIndex;
+
             var itemsAdded = AddArrangeCore(collection, startIndex);
 
             if (!itemsAdded)
@@ -200,7 +202,7 @@ namespace Rg.DiffUtils
             RaiseChangeNotificationEvents(
                 NotifyCollectionChangedAction.Add,
                 changedItems,
-                startIndex);
+                eventStartIndex);
         }
 
         protected virtual void RemoveRangeInternal(int startIndex, int count, IEnumerable<T> changedItems)
