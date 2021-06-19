@@ -61,25 +61,37 @@ namespace Rg.DiffUtils
             DefaultOptions = new DiffOptions();
         }
 
-        public virtual void ReplaceDiff(IEnumerable<T> seq, IDiffHandler<T> diffHandler)
+        public virtual DiffResult<T> ReplaceDiff(IEnumerable<T> seq, IDiffHandler<T> diffHandler)
         {
-            ReplaceDiff(seq, diffHandler, DefaultOptions);
+            return ReplaceDiff(seq, diffHandler, DefaultOptions);
         }
 
-        public virtual void ReplaceDiff(IEnumerable<T> seq, DiffOptions options)
+        public virtual DiffResult<T> ReplaceDiff(IEnumerable<T> seq, DiffOptions options)
         {
-            ReplaceDiff(seq, DefaultDiffHandler, options);
+            return ReplaceDiff(seq, DefaultDiffHandler, options);
         }
 
-        public virtual void ReplaceDiff(IEnumerable<T> seq)
+        public virtual DiffResult<T> ReplaceDiff(IEnumerable<T> seq)
         {
-            ReplaceDiff(seq, DefaultDiffHandler, DefaultOptions);
+            return ReplaceDiff(seq, DefaultDiffHandler, DefaultOptions);
         }
 
-        public virtual void ReplaceDiff(IEnumerable<T> seq, IDiffHandler<T> diffHandler, DiffOptions options)
+        public virtual DiffResult<T> ReplaceDiff(IEnumerable<T> seq, IDiffHandler<T> diffHandler, DiffOptions options)
         {
             var diffResult = DiffUtil.CalculateDiff(this, seq, diffHandler, options);
 
+            ReplaceDiff(diffResult, diffHandler);
+
+            return diffResult;
+        }
+
+        public virtual void ReplaceDiff(DiffResult<T> diffResult)
+        {
+            ReplaceDiff(diffResult, DiffHandler<T>.Default);
+        }
+
+        public virtual void ReplaceDiff(DiffResult<T> diffResult, IDiffHandler<T> diffHandler)
+        {
             foreach (var step in diffResult.Steps)
             {
                 switch (step.Status)
