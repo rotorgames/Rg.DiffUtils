@@ -2,6 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <Authors>Kirill Lyubimov</Authors>
+    <Owners>rotorgames</Owners>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageProjectUrl>https://github.com/rotorgames/Rg.DiffUtils</PackageProjectUrl>
+    <Title>Rg.DiffUtils</Title>
+    <PackageId>Rg.DiffUtils</PackageId>
+    <PackageIconUrl>https://raw.githubusercontent.com/rotorgames/Rg.DiffUtils/master/img/logo.png</PackageIconUrl>
+    <PackageTags>diff,collection,myers,observablecollectiom,merge</PackageTags>
+    <Description>Rg.DiffUtils is a powerful tool that allows to merge collections and find differences.
+
+The library uses Eugene W. Myers's algorithm to find differences and runs the second pass to find movements.
+
+The difference between this library and the rest that this library expands the ObservableCollection and allows to notify UI or other elements about all changes in collections.</Description>
   </PropertyGroup>
 
   <ItemGroup>
