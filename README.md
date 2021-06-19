@@ -1,5 +1,5 @@
 ![Header](img/header.png)
-# Rg.DiffUtils ![Nuget](https://img.shields.io/nuget/v/Rg.DiffUtils)
+# Rg.DiffUtils [![Nuget](https://img.shields.io/nuget/v/Rg.DiffUtils)](https://www.nuget.org/packages/Rg.DiffUtils)
 
 Rg.DiffUtils is a powerful tool that allows to merge collections and find differences.
 
